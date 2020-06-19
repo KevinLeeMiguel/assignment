@@ -21,7 +21,7 @@
         </div>
         <div class="h-col-xs-12 h-col-sm-6 h-col-md-6 h-col-lg-6">
           <img
-            :src="product.gallery[0]"
+            :src="product.gallery[1]"
             class="h-card-rounded h-card-h-shadow-default"
             style="width:100%; height:100%"
             alt
@@ -60,10 +60,10 @@ export default {
   },
   methods: {
     get_product: function() {
-      console.log(this.products);
       this.product = this.products.find(
         product => (product.name = this.$route.params.name)
       );
+      this.product.gallery = this.product.gallery.split(",");
     }
   },
   created() {
