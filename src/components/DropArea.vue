@@ -60,9 +60,8 @@ export default {
   methods: {
     success: function(file, response) {
       file.myUrl = response.url;
-      let url = response.url;
       this.uploaded_images.push(response.url);
-      this.$emit("picture-added", url);
+      this.$emit("picture-added", response.url);
     },
     removed: function(file) {
       this.uploaded_images = this.uploaded_images.filter(
