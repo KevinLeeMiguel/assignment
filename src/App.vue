@@ -1,16 +1,14 @@
 <template>
   <div id="app" class="h-mt-2 h-mx-20">
-    <NewProduct />
+    <router-view />
   </div>
 </template>
 
 <script>
-import NewProduct from "./views/new_product";
 
 export default {
   name: "App",
   components: {
-    NewProduct
   }
 };
 </script>
