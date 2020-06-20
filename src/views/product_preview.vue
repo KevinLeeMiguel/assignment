@@ -7,7 +7,7 @@
       <div class="h-row">
         <div class="h-row h-col-xs-12 h-col-sm-3 h-col-md-3 h-col-lg-3">
           <div
-            v-for="image in product.gallery"
+            v-for="image in product.gal"
             :key="image"
             class="h-col-xs-12 h-col-sm-12 h-col-md-12 h-col-lg-12"
           >
@@ -21,7 +21,7 @@
         </div>
         <div class="h-col-xs-12 h-col-sm-6 h-col-md-6 h-col-lg-6">
           <img
-            :src="product.gallery[1]"
+            :src="product.gal[1]"
             class="h-card-rounded h-card-h-shadow-default"
             style="width:100%; height:100%"
             alt
@@ -55,7 +55,9 @@ export default {
   },
   data() {
     return {
-      product: null
+      product: {
+        gal: []
+      }
     };
   },
   methods: {
@@ -63,7 +65,7 @@ export default {
       this.product = this.products.find(
         product => (product.name = this.$route.params.name)
       );
-      this.product.gallery = this.product.gallery.split(",");
+      this.product.gal = this.product.galleryy.split(","); 
     }
   },
   created() {

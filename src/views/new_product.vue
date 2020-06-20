@@ -46,7 +46,8 @@ export default {
         name: "",
         description: "",
         price: "",
-        gallery: "",
+        gallery: [],
+        galleryy: "",
         specifications: []
       },
       specs: 2
@@ -54,7 +55,8 @@ export default {
   },
   methods: {
     handle_newPicture: function(payload) {
-      this.product.gallery += `,${payload}`;
+      this.product.galleryy += `,${payload}`;
+      this.product.gallery.push(payload);
     },
     handle_picture_remove: function(payload) {
       this.product.gallery = this.product.gallery.filter(img => img != payload);
