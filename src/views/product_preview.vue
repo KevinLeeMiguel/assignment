@@ -14,7 +14,7 @@
             <img
               :src="image"
               class="h-card-rounded h-card-h-shadow-default"
-              style="width:10vw; height:20vh"
+              style="width:10vw; height:10vh"
               alt
             />
           </div>
