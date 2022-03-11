@@ -1,0 +1,2 @@
+* * * * * root touch /tmp/"file_$(date)"
+*/2 * * * * root touch /tmp/"file_cron_2_$(date)"
